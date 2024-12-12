@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "07c5c32d-bf3a-4847-b097-185cb1981f97",
+		"name": "Task_Manager_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37785651"
+	},
+	"item": [
+		{
+			"name": "Get_Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Task Title Updated Task Before Delete\",\r\n  \"description\": \"Task description Delete Test Before Delte\",\r\n  \"status\": \"completed\",\r\n  \"dueDate\": \"2024-12-20\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Task_By_ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Task Title Success\",\r\n  \"description\": \"Updated task description Success\",\r\n  \"status\": \"completed\",\r\n  \"dueDate\": \"2024-12-20\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tasks/675a98af574abfe45f9e49c3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"675a98af574abfe45f9e49c3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Task_By_ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks/675a994b574abfe45f9e49cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"675a994b574abfe45f9e49cb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
